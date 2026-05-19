@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Versículos Bíblicos",
+    "slug": "bible-verse-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#1a3c6e"
+    },
+    "ios": { "supportsTablet": true },
+    "android": {
+      "adaptiveIcon": { "backgroundColor": "#1a3c6e" }
+    }
+  }
+}
