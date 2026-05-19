@@ -101,14 +101,15 @@ export default function ChapterEditorScreen({ route, navigation }: Props) {
 
   const handleModalSave = () => {
     const text = form.text.trim();
-    if (!text) {
-      Alert.alert('Error', 'El versículo no puede estar vacío.');
+    const reference = form.reference.trim();
+    if (!text && !reference) {
+      Alert.alert('Error', 'Escribe al menos la referencia o el texto del versículo.');
       return;
     }
     const verse: Verse = {
       id: editingId ?? generateId(),
       text,
-      reference: form.reference.trim() || undefined,
+      reference: reference || undefined,
     };
     setVerses((prev) =>
       editingId ? prev.map((v) => (v.id === editingId ? verse : v)) : [...prev, verse]
