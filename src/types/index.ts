@@ -19,6 +19,7 @@ export interface Sermon {
 export type RootStackParamList = {
   Home: undefined;
   Practice: { sermonId: string; chapterId: string };
+  PinScreen: undefined;
   Admin: undefined;
   SermonEditor: { sermonId?: string };
   ChapterEditor: { sermonId: string; chapterId?: string };

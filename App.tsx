@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './src/screens/HomeScreen';
 import PracticeScreen from './src/screens/PracticeScreen';
+import PinScreen from './src/screens/PinScreen';
 import AdminScreen from './src/screens/AdminScreen';
 import SermonEditorScreen from './src/screens/SermonEditorScreen';
 import ChapterEditorScreen from './src/screens/ChapterEditorScreen';
@@ -30,6 +31,11 @@ export default function App() {
             options={{ title: 'Versículos Bíblicos' }}
           />
           <Stack.Screen name="Practice" component={PracticeScreen} />
+          <Stack.Screen
+            name="PinScreen"
+            component={PinScreen}
+            options={{ title: 'Administrador' }}
+          />
           <Stack.Screen
             name="Admin"
             component={AdminScreen}

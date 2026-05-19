@@ -1,0 +1,10 @@
+{
+  "name": "Versículos Bíblicos",
+  "short_name": "Versículos",
+  "description": "App para memorizar y practicar versículos bíblicos",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a3c6e",
+  "theme_color": "#1a3c6e",
+  "orientation": "portrait-primary"
+}

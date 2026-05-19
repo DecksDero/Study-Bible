@@ -11,6 +11,7 @@ import { useFocusEffect } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList, Sermon, Chapter } from '../types';
 import { loadSermons } from '../storage/dataService';
+import { isAuthenticated } from '../auth';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
@@ -27,7 +28,10 @@ export default function HomeScreen({ navigation }: Props) {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
-        <TouchableOpacity onPress={() => navigation.navigate('Admin')} style={styles.headerBtn}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(isAuthenticated() ? 'Admin' : 'PinScreen')}
+          style={styles.headerBtn}
+        >
           <Text style={styles.headerBtnText}>⚙ Admin</Text>
         </TouchableOpacity>
       ),
@@ -61,7 +65,7 @@ export default function HomeScreen({ navigation }: Props) {
         <Text style={styles.emptySubtitle}>
           Ve a Admin para agregar sermones y versículos.
         </Text>
-        <TouchableOpacity style={styles.emptyBtn} onPress={() => navigation.navigate('Admin')}>
+        <TouchableOpacity style={styles.emptyBtn} onPress={() => navigation.navigate(isAuthenticated() ? 'Admin' : 'PinScreen')}>
           <Text style={styles.emptyBtnText}>Ir a Admin</Text>
         </TouchableOpacity>
       </View>

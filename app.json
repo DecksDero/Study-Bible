@@ -12,6 +12,15 @@
     "ios": { "supportsTablet": true },
     "android": {
       "adaptiveIcon": { "backgroundColor": "#1a3c6e" }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "name": "Versículos Bíblicos",
+      "shortName": "Versículos",
+      "themeColor": "#1a3c6e",
+      "backgroundColor": "#1a3c6e",
+      "description": "App para memorizar y practicar versículos bíblicos"
     }
   }
 }
